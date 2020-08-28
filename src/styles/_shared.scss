@@ -1,0 +1,16 @@
+$font-huge-weight: 700;
+$font-small-weight: 500;
+$font-size-default: 13px;
+
+@mixin google-font($family) {
+    @import url("https://fonts.googleapis.com/css2?family=#{$family}:wght@#{$font-small-weight};#{$font-huge-weight}&display=swap");
+}
+@include google-font("Manrope");
+
+$default-family-font: 'Manrope', sans-serif;
+
+$primary-color: hsl(217, 19%, 35%);
+$secondary-color: hsl(214, 17%, 51%);
+$primary-text-color: hsl(212, 23%, 69%);
+$accent-color: hsl(210, 46%, 95%);
+

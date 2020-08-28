@@ -1,0 +1,9 @@
+@import '_shared';
+@import '_reset';
+
+body {
+  margin: 0;
+  font-size: $font-size-default;
+  font-family: $default-family-font;
+}
+
