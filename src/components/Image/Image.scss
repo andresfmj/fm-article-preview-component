@@ -1,9 +1,5 @@
 @import '../../styles/shared';
 
-.ImageLeftside {
-	border-top-left-radius: 0.8rem;
-	border-bottom-left-radius: 0.8rem;
-}
 
 .img-circle {
 	width: 40px;
@@ -18,10 +14,9 @@
 
 .sharer-icon-container {
 	position: relative;
-	width: 34px;
-	height: 34px;
+	// width: 34px;
+	// height: 34px;
 	border-radius: 30px;
-	background-color: $accent-color;
 
 	.sharer-float {
 		position: absolute;
@@ -30,7 +25,6 @@
 		border-radius: 0.6rem;
 		padding: 1.3rem 1.1rem;
 		background-color: $primary-text-color;
-		display: flex;
 
 		transition: visibility .3s, opacity .3s;
 
@@ -67,12 +61,73 @@
 		}
 	}
 
-	.hidden {
-		visibility: hidden;
-		opacity: 0;
+}
+
+
+// Desktop: 1440px
+@media (min-width: 1280px) {
+
+	.sharer-icon-container {
+		background-color: $accent-color;
+	}
+
+    .ImageLeftside {
+		border-top-left-radius: 0.8rem;
+		border-bottom-left-radius: 0.8rem;
+	}
+	.sharer-float {
+		display: flex;
 	}
 	.visible {
 		visibility: visible;
 		opacity: 1;
+	}
+	.hide {
+		display: none;
+	}
+	.hidden {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+// Mobile: 375px
+@media (max-width: 375px) {
+
+	.icon-shared {
+		background-color: $accent-color;
+	}
+
+	.inverted-shared {
+		background-color: $primary-color;
+	}
+
+	.icon {
+		width: 30px;
+		height: 30px;
+		background-color: white;
+		cursor: pointer;
+	}
+
+    .ImageLeftside {
+		border-top-left-radius: 0.8rem;
+		border-top-right-radius: 0.8rem;
+	}
+	.sharer-float {
+		display: none;
+	}
+	.slide-up {
+		transform: translateY(0px);
+	}
+	.slide-down {
+		transform: translateY(90px);
+	}
+	.visible-sm {
+		visibility: visible;
+		opacity: 1;
+	}
+	.hidden-sm {
+		visibility: hidden;
+		opacity: 0;
 	}
 }
