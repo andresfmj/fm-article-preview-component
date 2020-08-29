@@ -1,24 +1,69 @@
 @import '../../styles/shared';
 
 .ImageLeftside {
-    border-top-left-radius: .8rem;
-    border-bottom-left-radius: .8rem;
+	border-top-left-radius: 0.8rem;
+	border-bottom-left-radius: 0.8rem;
 }
 
 .img-circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 35px;
+	width: 40px;
+	height: 40px;
+	border-radius: 35px;
 }
 
 .img-share {
-    padding: .6rem;
+	padding: 0.6rem;
 }
 
 .sharer-icon-container {
-    width: 34px;
-    height: 34px;
-    border-radius: 30px;
-    background-color: $accent-color;
-    cursor: pointer;
+	position: relative;
+	width: 34px;
+	height: 34px;
+	border-radius: 30px;
+	background-color: $accent-color;
+	cursor: pointer;
+
+	.sharer-float {
+		position: absolute;
+		top: -95px;
+		left: -110px;
+		border-radius: 0.6rem;
+		padding: 1.3rem 1.1rem;
+		background-color: $primary-text-color;
+		display: flex;
+
+		.arrow_box {
+			position: relative;
+			background: $primary-text-color;
+			&:after,
+			&:before {
+				top: 41px;
+				left: 108px;
+				border: solid transparent;
+				content: ' ';
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+			}
+			&:before {
+				border-color: rgba(194, 225, 245, 0);
+				border-top-color: $primary-text-color;
+				border-width: 16px;
+				margin-left: -16px;
+			}
+		}
+
+		p {
+			text-transform: uppercase;
+			margin: 0rem 1.1rem;
+			letter-spacing: 0.4rem;
+		}
+		.social-icons {
+			display: flex;
+			img {
+				margin: 0rem 0.6rem;
+			}
+		}
+	}
 }

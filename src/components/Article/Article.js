@@ -8,6 +8,11 @@ import drawersImage from '../../images/drawers.jpg';
 import avatarPerson from '../../images/avatar-michelle.jpg';
 import shareIcon from '../../images/icon-share.svg';
 
+import fbIcon from '../../images/icon-facebook.svg';
+import twIcon from '../../images/icon-twitter.svg';
+import pintIcon from '../../images/icon-pinterest.svg';
+
+
 function Article(props) {
 
     return (
@@ -37,6 +42,15 @@ function Article(props) {
                         </div>
                         <div className="Article-sharer">
                             <div className="sharer-icon-container">
+                                <div className="sharer-float">
+                                    <div className="arrow_box"></div>
+                                    <p>share</p>
+                                    <div className="social-icons">
+                                        <Image srcImage={fbIcon} alt="" />
+                                        <Image srcImage={twIcon} alt="" />
+                                        <Image srcImage={pintIcon} alt="" />
+                                    </div>
+                                </div>
                                 <Image srcImage={shareIcon} alt="" className='img-share' />
                             </div>
                         </div>
