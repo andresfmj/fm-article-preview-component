@@ -13,6 +13,7 @@
 
 .img-share {
 	padding: 0.6rem;
+	cursor: pointer;
 }
 
 .sharer-icon-container {
@@ -21,36 +22,34 @@
 	height: 34px;
 	border-radius: 30px;
 	background-color: $accent-color;
-	cursor: pointer;
 
 	.sharer-float {
 		position: absolute;
 		top: -95px;
-		left: -110px;
+		left: -115px;
 		border-radius: 0.6rem;
 		padding: 1.3rem 1.1rem;
 		background-color: $primary-text-color;
 		display: flex;
 
+		transition: visibility .3s, opacity .3s;
+
 		.arrow_box {
 			position: relative;
 			background: $primary-text-color;
-			&:after,
-			&:before {
-				top: 41px;
-				left: 108px;
+			&:after {
+				top: 40px;
+				left: 115px;
 				border: solid transparent;
-				content: ' ';
+				content: " ";
 				height: 0;
 				width: 0;
 				position: absolute;
 				pointer-events: none;
-			}
-			&:before {
-				border-color: rgba(194, 225, 245, 0);
+				border-color: rgba(136, 183, 213, 0);
 				border-top-color: $primary-text-color;
-				border-width: 16px;
-				margin-left: -16px;
+				border-width: 18px;
+				margin-left: -18px;
 			}
 		}
 
@@ -63,7 +62,17 @@
 			display: flex;
 			img {
 				margin: 0rem 0.6rem;
+				cursor: pointer;
 			}
 		}
+	}
+
+	.hidden {
+		visibility: hidden;
+		opacity: 0;
+	}
+	.visible {
+		visibility: visible;
+		opacity: 1;
 	}
 }
