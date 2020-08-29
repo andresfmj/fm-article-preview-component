@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import "./Article.scss";
 
@@ -6,7 +6,7 @@ import Image from '../Image/Image';
 
 import drawersImage from '../../images/drawers.jpg';
 import avatarPerson from '../../images/avatar-michelle.jpg';
-import shareIcon from '../../images/icon-share.svg';
+import shareIconImg from '../../images/icon-share.svg';
 
 import fbIcon from '../../images/icon-facebook.svg';
 import twIcon from '../../images/icon-twitter.svg';
@@ -14,6 +14,12 @@ import pintIcon from '../../images/icon-pinterest.svg';
 
 
 function Article(props) {
+    const [shareIcon, setShareIcon] = useState(false)
+
+    const showShareIconHandler = () => {
+        setShareIcon(!shareIcon)
+    }
+
 
     return (
         <div className='Article'>
@@ -42,7 +48,7 @@ function Article(props) {
                         </div>
                         <div className="Article-sharer">
                             <div className="sharer-icon-container">
-                                <div className="sharer-float">
+                                <div className={`sharer-float ${shareIcon ? 'visible' : 'hidden'}`}>
                                     <div className="arrow_box"></div>
                                     <p>share</p>
                                     <div className="social-icons">
@@ -51,7 +57,7 @@ function Article(props) {
                                         <Image srcImage={pintIcon} alt="" />
                                     </div>
                                 </div>
-                                <Image srcImage={shareIcon} alt="" className='img-share' />
+                                <Image srcImage={shareIconImg} alt="" className='img-share' onClick={showShareIconHandler} />
                             </div>
                         </div>
                     </div>
