@@ -47,8 +47,8 @@ function Article(props) {
                             </div>
                         </div>
                         <div className="Article-sharer">
-                            <div className="sharer-icon-container">
-                                <div className={`sharer-float ${shareIcon ? 'visible' : 'hidden'}`}>
+                            <div className="sharer-icon-container icon-shared">
+                                <div className={`sharer-float ${shareIcon ? 'visible visible-sm' : 'hidden hidden-sm'}`}>
                                     <div className="arrow_box"></div>
                                     <p>share</p>
                                     <div className="social-icons">
@@ -59,6 +59,19 @@ function Article(props) {
                                 </div>
                                 <Image srcImage={shareIconImg} alt="" className='img-share' onClick={showShareIconHandler} />
                             </div>
+                        </div>
+                    </div>
+                    <div className={`Article-share-bottom hide ${shareIcon ? 'slide-up' : 'slide-down'}`}>
+                        <div className="share-bottom">
+                            <p>share</p>
+                            <div className="social-icons">
+                                <Image srcImage={fbIcon} alt="" />
+                                <Image srcImage={twIcon} alt="" />
+                                <Image srcImage={pintIcon} alt="" />
+                            </div>
+                        </div>
+                        <div className={`sharer-icon-container hide inverted-shared slide-up`}>
+                            <div className="icon icon-share" style={{ mask: `url(${shareIconImg}) center no-repeat` }} onClick={showShareIconHandler}></div>
                         </div>
                     </div>
                 </div>
