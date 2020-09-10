@@ -24,7 +24,7 @@ function Article(props) {
     return (
         <div className='Article'>
             <div className="Article-inner">
-                <Image srcImage={drawersImage} alt="" width='100%' className='ImageLeftside' />
+                <Image srcImage={drawersImage} alt="" className='ImageLeftside img-responsive' />
                 <div className="Article-content">
                     <header>
                         <h2>

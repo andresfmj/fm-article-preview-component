@@ -12,6 +12,10 @@
 	cursor: pointer;
 }
 
+.img-responsive {
+	width: 100%;
+}
+
 .sharer-icon-container {
 	position: relative;
 	// width: 34px;
@@ -65,7 +69,7 @@
 
 
 // Desktop: 1440px
-@media (min-width: 720px) {
+@media (min-width: 1440px) {
 
 	.sharer-icon-container {
 		background-color: $accent-color;

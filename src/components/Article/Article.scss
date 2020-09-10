@@ -48,7 +48,7 @@
 }
 
 // Desktop: 1440px
-@media (min-width: 720px) {
+@media (min-width: 1440px) {
     .Article-inner {
         width: 850px;
         .Article-content {
@@ -60,9 +60,9 @@
 // Mobile: 375px
 @media (max-width: 375px) {
     .Article-inner {
-        width: 85%;
+        margin: 1.5rem;
         flex-direction: column;
-        clip-path: polygon(0 0, 100% 0, 110% 99%, 0 99%);
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
         .Article-content {
             margin: 1.5rem;
             position: relative;
